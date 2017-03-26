@@ -5,9 +5,9 @@ const thrift = require("thrift");
 const Hello = require("./gen-nodejs/Hello");
 
 const server = thrift.createServer(Hello, {
-    hi: function (result) {
+    hi: (result) => {
         console.log("hi()");
-        result("Hello from Thrfit");
+        result(null, "Hello from Thrift");
     }
 });
 
