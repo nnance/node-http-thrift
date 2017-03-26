@@ -5,7 +5,7 @@
 const thrift = require("thrift");
 const Hello = require("./gen-nodejs/Hello");
 
-const connection = thrift.createConnection("localhost", 9090, {
+const connection = thrift.createHttpConnection("localhost", 9090, {
     transport: thrift.TBufferedTransport,
     protocol: thrift.TBinaryProtocol
 });
